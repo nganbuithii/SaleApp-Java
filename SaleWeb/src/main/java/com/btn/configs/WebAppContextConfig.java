@@ -4,9 +4,11 @@
  */
 package com.btn.configs;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -20,8 +22,11 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages={
-    "com.btn.controllers"
+    "com.btn.controllers",
+    "com.btn.repositories",
+    "com.btn.services"
 })
+@EnableTransactionManagement
 public class WebAppContextConfig implements WebMvcConfigurer{
 
     @Override
@@ -33,7 +38,7 @@ public class WebAppContextConfig implements WebMvcConfigurer{
     public InternalResourceViewResolver internalResourceViewResolver(){
         InternalResourceViewResolver r =new InternalResourceViewResolver();
         r.setViewClass(JstlView.class);
-        r.setPrefix("/WEB-INF/pages");
+        r.setPrefix("/WEB-INF/pages/");
         r.setSuffix(".jsp");
         
         return r;
