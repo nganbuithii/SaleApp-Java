@@ -5,6 +5,8 @@ import com.btn.pojo.Product;
 import com.btn.repositories.ProductRepository;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,9 +23,13 @@ import java.util.Objects;
 
 @Repository
 @Transactional
+@PropertySource("classpath:configs.properties")
 public class ProductRepositoryImpl implements ProductRepository {
     @Autowired
     private LocalSessionFactoryBean factoryBean;
+
+    @Autowired
+    private Environment env;
 
     @Override
     public List<Product> getProducts(Map<String, String> params) {
@@ -74,7 +80,7 @@ public class ProductRepositoryImpl implements ProductRepository {
         // PHÂN TRANG
         String p = params.get("page");
         if( p!= null && !p.isEmpty()){
-            int pagesize = 6;
+            int pagesize = Integer.parseInt(env.getProperty("products.pagesize").toString());
             int start = (Integer.parseInt(p) -1) * pagesize;
 
             // bắt đầu lấy từ đâu
