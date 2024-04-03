@@ -5,10 +5,14 @@
 package com.btn.controllers;
 
 import com.btn.services.CategoryService;
+import com.btn.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Map;
 
 /**
  *
@@ -18,10 +22,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
     @Autowired
     private CategoryService cateService;
+    @Autowired
+    private ProductService productService;
     
     @RequestMapping("/")
-    public String index(Model model){
+    public String index(Model model, @RequestParam Map<String, String> params){
         model.addAttribute("categories", this.cateService.getCates());
+        model.addAttribute("products", this.productService.getProducts(params));
         return "index";
     }
 }

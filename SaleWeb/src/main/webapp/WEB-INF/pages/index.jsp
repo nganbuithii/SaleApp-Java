@@ -43,5 +43,6 @@
                     </div>
                 </div>
             </nav>
+${products}
         </body>
     </html>
