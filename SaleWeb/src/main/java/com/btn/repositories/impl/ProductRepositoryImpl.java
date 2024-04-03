@@ -70,6 +70,18 @@ public class ProductRepositoryImpl implements ProductRepository {
         }
 
         Query query = s.createQuery(q);
+
+        // PHÂN TRANG
+        String p = params.get("page");
+        if( p!= null && !p.isEmpty()){
+            int pagesize = 6;
+            int start = (Integer.parseInt(p) -1) * pagesize;
+
+            // bắt đầu lấy từ đâu
+            query.setFirstResult(start);
+            query.setMaxResults(pagesize);
+        }
+
         return (List<Product>) query.getResultList();
     }
 
