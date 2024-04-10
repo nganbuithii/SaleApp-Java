@@ -13,22 +13,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 /**
  *
  * @author admin
  */
 @Controller
+@ControllerAdvice
 public class IndexController {
     @Autowired
     private CategoryService cateService;
     @Autowired
-    private ProductService productService;
+    private ProductService prodService;
+    
+    @ModelAttribute
+    public void commonAttr(Model model) {
+        model.addAttribute("categories", this.cateService.getCates());
+    }
     
     @RequestMapping("/")
-    public String index(Model model, @RequestParam Map<String, String> params){
-        model.addAttribute("categories", this.cateService.getCates());
-        model.addAttribute("products", this.productService.getProducts(params));
+    public String index(Model model,
+            @RequestParam Map<String, String> params) {
+        
+        model.addAttribute("products", this.prodService.getProducts(params));
         return "index";
     }
 }

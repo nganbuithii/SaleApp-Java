@@ -19,61 +19,27 @@
 </head>
 <body>
 <%--<h1>Hello World!</h1>--%>
-
-    <ul>
-
-    </ul>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="javascript:void(0)">MY SALE APP</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="<c:url value="/"/>">Trang chủ</a>
-
-                    <c:forEach items="${categories}" var="c">
-                        <li class="nav-item">
-
-<%--                            Xay dung duong dan url--%>
-                            <c:url value="/" var="myUrl">
-                                <c:param name="cateId" value="${c.id}"/>
-                            </c:url>
-                            <a class="nav-link" href="${myUrl}">${c.name}</a>
-                        </li>
-                    </c:forEach>
-
-
-                </ul>
-    <%--            form tìm kiếm--%>
-                <form action="<c:url value=""/> " class="d-flex">
-                    <input class="form-control me-2" type="text" name="kw" placeholder="Nhập tên..">
-                    <button class="btn btn-primary" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <section class="container">
-        <div class="row ">
-            <c:forEach items="${products}" var="p">
-                <div class="col-md-3 col-12">
-                    <div class="card">
-                        <img class="card-img-top" src="${p.image}" alt="${p.name}">
-                        <div class="card-body">
-                            <h4 class="card-title">${p.name}</h4>
-                            <p class="card-text">${p.price}</p>
-                            <a href="#" class="btn btn-primary">Xem chi tiết</a>
-                            <a href="#" class="btn btn-danger">Đặt hàng</a>
-                        </div>
-                    </div>
-                </div>
-            </c:forEach>
-
-        </div>
-    </section>
-</body>
+<h1 class="text-center text-info mt-1">DANH MỤC SẢN PHẨM</h1>
+<a href="<c:url value="/products" />" class ="btn btn-success mb-1">Thêm sản phẩm</a>
+   <table class="container table table-striped">
+    <tr>
+        <th></th>
+        <th>Id</th>
+        <th>Tên</th>
+        <th>Gía</th>
+        <th></th>
+    </tr>
+    <c:forEach items="${products}" var="p">
+        <tr>
+            <td> <img class="card-img-top" src="${p.image}" alt="${p.name}" style="width:300px;"></td>
+            <td>${p.id}</td>
+            <td>${p.name}</td>
+            <td>${p.price} VNĐ</td>
+            <td>
+                <button class="btn btn-info">Cập nhật</button>
+                <button class="btn btn-danger">Xóa</button>
+            </td>
+        </tr>
+    </c:forEach>
+</table>
 </html>
