@@ -14,6 +14,8 @@ import org.springframework.web.servlet.view.tiles3.TilesView;
  *
  * @author admin
  */
+
+// bien thanh ro dau configuration -> dispatcher khai bao
 @Configuration
 public class TilesConfig {
 
