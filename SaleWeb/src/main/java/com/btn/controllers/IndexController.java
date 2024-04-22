@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
  * @author admin
  */
 @Controller
-@ControllerAdvice
+@ControllerAdvice // dung chung cho cac controller khac
 public class IndexController {
     @Autowired
     private CategoryService cateService;
@@ -30,6 +30,7 @@ public class IndexController {
     
     @ModelAttribute
     public void commonAttr(Model model) {
+        // phan header chung va gan @modelattribute
         model.addAttribute("categories", this.cateService.getCates());
     }
     
