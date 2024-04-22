@@ -8,7 +8,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <h1>QUẢN TRỊ SẢN PHẨM!</h1>
-<form:form method="post" modelAttribute="products" enctype="multipart/form-data">
+<%--Tao action--%>
+<c:url value="/products" var="action"/>
+<form:form method="post" action="${action}" modelAttribute="products" enctype="multipart/form-data">
     <div class="form-floating mb-3 mt-3">
         <form:input class="form-control" id="name" placeholder="Tên sản phẩm" path="name"/>
         <label for="name">Tên sản phẩm</label>

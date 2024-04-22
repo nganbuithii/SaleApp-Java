@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  *
@@ -25,5 +27,12 @@ public class ProductController {
         model.addAttribute("products", new Product());
          model.addAttribute("categories", categoryService.getCates());
         return "products";
+    }
+
+    // create product
+    // gui package bean
+    @PostMapping("/products")
+    public  String createProduct(@ModelAttribute(value = "product") Product p){
+        return  "abc ";
     }
 }
