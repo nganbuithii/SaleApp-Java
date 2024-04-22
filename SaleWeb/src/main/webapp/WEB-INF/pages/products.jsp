@@ -16,7 +16,7 @@
         <label for="name">Tên sản phẩm</label>
     </div>
     <div class="form-floating mb-3 mt-3">
-        <input type="file" class="form-control" id="image"/>
+        <form:input type="file" class="form-control" id="image" path="file"/>
         <label for="image">ảnh sản phẩm</label>
     </div>
     <div class="form-floating mb-3 mt-3">
