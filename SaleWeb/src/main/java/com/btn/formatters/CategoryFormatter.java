@@ -8,12 +8,14 @@ import java.util.Locale;
 
 public class CategoryFormatter implements Formatter<Category> {
     @Override
-    public Category parse(String text, Locale locale) throws ParseException {
-        return null;
+    public Category parse(String id, Locale locale) throws ParseException {
+        Category c = new Category();
+        c.setId(Integer.parseInt(id));
+        return  c;
     }
 
     @Override
-    public String print(Category object, Locale locale) {
-        return null;
+    public String print(Category cate, Locale locale) {
+        return String.valueOf(cate.getId());
     }
 }

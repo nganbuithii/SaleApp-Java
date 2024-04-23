@@ -41,7 +41,7 @@ public class Product implements Serializable {
     @Column(name = "id")
     private Integer id;
     @Basic(optional = false)
-    @NotNull(message = "{product.name.nullErr}")
+    @NotNull
     @Size(min = 1, max = 50, message = "{product.name.minMaxError}")
     @Column(name = "name")
     private String name;
