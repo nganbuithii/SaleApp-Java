@@ -10,10 +10,15 @@
 <h1>QUẢN TRỊ SẢN PHẨM!</h1>
 <%--Tao action--%>
 <c:url value="/products" var="action"/>
-<form:form method="post" action="${action}" modelAttribute="products" enctype="multipart/form-data">
+<%--@elvariable id="products" type=""--%>
+<form:form method="post" action="${action}" modelAttribute="product" enctype="multipart/form-data">
+<%--    Xuat loi--%>
+    <form:errors path="name" cssClass="alert alert-danger "/>
     <div class="form-floating mb-3 mt-3">
+
         <form:input class="form-control" id="name" placeholder="Tên sản phẩm" path="name"/>
         <label for="name">Tên sản phẩm</label>
+
     </div>
     <div class="form-floating mb-3 mt-3">
         <form:input type="file" class="form-control" id="image" path="file"/>

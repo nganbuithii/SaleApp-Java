@@ -9,9 +9,12 @@ import com.btn.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import javax.validation.Valid;
 
 /**
  *
@@ -24,7 +27,7 @@ public class ProductController {
     private CategoryService categoryService;
      @GetMapping("/products")
     public String createView(Model model) {
-        model.addAttribute("products", new Product());
+        model.addAttribute("product", new Product());
          model.addAttribute("categories", categoryService.getCates());
         return "products";
     }
@@ -32,7 +35,13 @@ public class ProductController {
     // create product
     // gui package bean
     @PostMapping("/products")
-    public  String createProduct(@ModelAttribute(value = "product") Product p){
-        return  "abc ";
+    public String createProduct(@ModelAttribute(value = "product") @Valid Product p, BindingResult rs) {
+        // neu khong co loi
+        if (!rs.hasErrors()) {
+            return "";
+        }
+        // neu co loi hien tren trang product
+        return "products";
     }
+
 }

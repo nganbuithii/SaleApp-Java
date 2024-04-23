@@ -10,7 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe2259d7-a4af-44c1-abf6-3e70d4ca45ea" name="Changes" comment="Tách file ra để phân trang">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/configs/WebAppContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/configs/WebAppContextConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/controllers/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/pojo/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/pojo/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp" afterDir="false" />
     </list>
@@ -44,7 +48,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -74,7 +78,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "settings.qodana",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -227,7 +231,8 @@
       <workItem from="1713694279140" duration="54000" />
       <workItem from="1713708229258" duration="431000" />
       <workItem from="1713709236699" duration="3752000" />
-      <workItem from="1713768435274" duration="3029000" />
+      <workItem from="1713768435274" duration="6618000" />
+      <workItem from="1713859082170" duration="1852000" />
     </task>
     <task id="LOCAL-00001" summary="Xử lí dữ liệu product - tạo hạt đậu">
       <option name="closed" value="true" />
