@@ -10,14 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe2259d7-a4af-44c1-abf6-3e70d4ca45ea" name="Changes" comment="Tách file ra để phân trang">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/btn/controllers/StatsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/btn/repositories/StatsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/btn/repositories/impl/StatsRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/btn/services/StatsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/btn/services/impl/StatsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/stats.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/controllers/StatsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/controllers/StatsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/stats.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/stats.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +236,7 @@
       <workItem from="1713709236699" duration="3752000" />
       <workItem from="1713768435274" duration="6618000" />
       <workItem from="1713859082170" duration="8076000" />
-      <workItem from="1713877715812" duration="8708000" />
+      <workItem from="1713877715812" duration="9673000" />
     </task>
     <task id="LOCAL-00001" summary="Xử lí dữ liệu product - tạo hạt đậu">
       <option name="closed" value="true" />
