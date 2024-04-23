@@ -28,10 +28,10 @@
         </table>
     </div>
     <div class="col-md-7 col-12">
-
+        <canvas id="myChart"></canvas>
     </div>
 </div>
-
+<hr class="hr" />
 <div class="row">
     <div class="col-md-5 col-12">
         <table class="table">
@@ -51,6 +51,32 @@
         </table>
     </div>
     <div class="col-md-7 col-12">
-
+        <canvas id="myChart2"></canvas>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="<c:url value="js/script.js"/> "></script>
+<script>
+    // bat su kien on load de xem no nap du lieu chua
+    let label = [];
+    let data = [];
+    let label2 = [];
+    let data2 = [];
+    <c:forEach items="${RenvenueByProduct}" var="p">
+    label.push('${p[1]}');
+    data.push('${p[2]}');
+
+    </c:forEach>
+    <c:forEach items="${RevenueByPeriod}" var="p">
+    label2.push(${p[0]});
+    data2.push('${p[1]}');
+
+    </c:forEach>
+    window.onload = function () {
+        let ctx1 = document.getElementById("myChart");
+        let ctx2 = document.getElementById("myChart2");
+        drawChartRevenue(ctx1, label, data, "DOANH THU");
+        drawChartRevenue(ctx2, label2, data2, "DOANH THU THANG");
+    }
+</script>

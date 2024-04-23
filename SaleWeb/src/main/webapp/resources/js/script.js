@@ -13,3 +13,28 @@ function deleteProduct(id) {
         alert("Error");
     });
 }
+
+
+function drawChartRevenue(ctx, label, data, title) {
+    // const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: label,
+            datasets: [{
+                label: title,
+                data: data,
+                borderWidth: 1,
+                backgroundColor:['pink','yello','green','white','orange']
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
