@@ -11,4 +11,5 @@ public interface ProductRepository {
     void createProduct(String name, String description, Long price, int cateId);
     void updateProduct(int prodId, Map<String, String> params);
     void deleteProduct(int prodId);
+    void addOrUpdate(Product p);
 }

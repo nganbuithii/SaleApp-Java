@@ -6,6 +6,7 @@ package com.btn.controllers;
 
 import com.btn.pojo.Product;
 import com.btn.services.CategoryService;
+import com.btn.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
+import java.io.IOException;
 
 /**
  *
@@ -25,6 +27,8 @@ public class ProductController {
 
     @Autowired
     private CategoryService categoryService;
+    @Autowired
+    private ProductService productService;
      @GetMapping("/products")
     public String createView(Model model) {
         model.addAttribute("product", new Product());
@@ -38,7 +42,12 @@ public class ProductController {
     public String createProduct(@ModelAttribute(value = "product") @Valid Product p, BindingResult rs) {
         // neu khong co loi
         if (!rs.hasErrors()) {
-            return "";
+                try {
+                    this.productService.addOrUpdate(p);
+                    return "redirect:/";
+                }catch (Exception ex) {
+                    System.err.println(ex.getMessage());
+                }
         }
         // neu co loi hien tren trang product
         return "products";

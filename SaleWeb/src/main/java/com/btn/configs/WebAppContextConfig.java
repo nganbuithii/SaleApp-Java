@@ -6,6 +6,8 @@ package com.btn.configs;
 
 
 import com.btn.formatters.CategoryFormatter;
+import com.cloudinary.Cloudinary;
+import com.cloudinary.utils.ObjectUtils;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -71,4 +73,14 @@ public class WebAppContextConfig implements WebMvcConfigurer{
     public void addFormatters(FormatterRegistry registry) {
         registry.addFormatter(new CategoryFormatter());
     }
+    @Bean
+    public Cloudinary cloudinary() {
+        Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
+                "cloud_name", "dp0daqkme",
+                "api_key", "798394568922116",
+                "api_secret", "AeLuIp-ncowCUuL-Yl2euuQoaoI",
+                "secure", true));
+        return cloudinary;
+    }
+
 }

@@ -158,4 +158,11 @@ public class ProductRepositoryImpl implements ProductRepository {
         session.delete(p);
         session.getTransaction().commit();
     }
+
+    @Override
+    public void addOrUpdate(Product p) {
+        Session s = this.factoryBean.getObject().getCurrentSession();
+        s.saveOrUpdate(p); // Sử dụng phương thức saveOrUpdate() với đối tượng Product p
+    }
+
 }
