@@ -62,4 +62,15 @@ public class ProductServiceImpl implements ProductService {
         this.productRepo.addOrUpdate(p);
     }
 
+    @Override
+    public Product getProductById(int id){
+        try {
+            return  this.productRepo.getProductById(id);
+            // Code to get product by ID
+        } catch (Exception e) {
+            System.out.println("Error occurred while getting product by ID: " + e.getMessage());
+        }
+        return null;
+
+    }
 }

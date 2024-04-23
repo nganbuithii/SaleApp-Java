@@ -165,4 +165,10 @@ public class ProductRepositoryImpl implements ProductRepository {
         s.saveOrUpdate(p); // Sử dụng phương thức saveOrUpdate() với đối tượng Product p
     }
 
+    @Override
+    public Product getProductById(int id){
+        Session s = this.factoryBean.getObject().getCurrentSession();
+        return s.get(Product.class, id);
+    }
+
 }
