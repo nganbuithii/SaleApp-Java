@@ -16,7 +16,7 @@ public class StatsController {
     public String StatsView(Model model){
         // do du lieu
         model.addAttribute("RenvenueByProduct", this.statsService.statsRevenueByProduct());
-        model.addAttribute("RevenueByMonth", this.statsService.statsRevenueByPeriod(LocalDate.now().getYear(),"MONTH"));
+        model.addAttribute("RevenueByPeriod", this.statsService.statsRevenueByPeriod(LocalDate.now().getYear(),"MONTH"));
 
         return "stats";
     }

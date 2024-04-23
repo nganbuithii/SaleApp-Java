@@ -31,3 +31,26 @@
 
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-5 col-12">
+        <table class="table">
+            <tr>
+
+                <th>Thơì Gian</th>
+                <th>
+                    Doanh thu
+                </th>
+            </tr>
+            <c:forEach items="${RevenueByPeriod}" var="p">
+                <tr>
+                    <td>${p[0]}</td>
+                    <td>${String.format("%,d",p[1])} vnd</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <div class="col-md-7 col-12">
+
+    </div>
+</div>
