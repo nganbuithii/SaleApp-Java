@@ -9,16 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe2259d7-a4af-44c1-abf6-3e70d4ca45ea" name="Changes" comment="Tách file ra để phân trang">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/repositories/impl/ProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/repositories/impl/ProductRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/services/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/services/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/products.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="fe2259d7-a4af-44c1-abf6-3e70d4ca45ea" name="Changes" comment="Tách file ra để phân trang" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,7 +225,7 @@
       <workItem from="1713709236699" duration="3752000" />
       <workItem from="1713768435274" duration="6618000" />
       <workItem from="1713859082170" duration="8076000" />
-      <workItem from="1713877715812" duration="4418000" />
+      <workItem from="1713877715812" duration="4900000" />
     </task>
     <task id="LOCAL-00001" summary="Xử lí dữ liệu product - tạo hạt đậu">
       <option name="closed" value="true" />

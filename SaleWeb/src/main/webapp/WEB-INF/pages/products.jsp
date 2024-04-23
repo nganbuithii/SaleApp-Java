@@ -66,6 +66,7 @@
         </button>
 
             <%--        <button type="submit" class="btn btn-info"></button>--%>
+        <form:hidden path="id" />
     </div>
 
 
