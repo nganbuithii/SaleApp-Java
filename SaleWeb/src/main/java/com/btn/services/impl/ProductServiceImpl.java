@@ -44,8 +44,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void deleteProduct(int prodId) {
-        productRepo.deleteProduct(prodId);
+    public void deleteProduct(int id) {
+        this.productRepo.deleteProduct(id);
     }
 
     @Override

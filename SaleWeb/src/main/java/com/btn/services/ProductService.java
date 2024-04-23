@@ -10,7 +10,7 @@ public interface ProductService {
     List<Product> getProducts(Map<String, String> params);
     void createProduct(String name, String description, Long price, int cateId);
     void updateProduct(int prodId, Map<String, String> params);
-    void deleteProduct(int prodId);
+    void deleteProduct(int id);
 
     void addOrUpdate(Product p);
     Product getProductById(int id);

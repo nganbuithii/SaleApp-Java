@@ -150,13 +150,13 @@ public class ProductRepositoryImpl implements ProductRepository {
     }
 
     @Override
-    public void deleteProduct(int prodId) {
+    public void deleteProduct(int id) {
         Session session = Objects.requireNonNull(this.factoryBean.getObject()).getCurrentSession();
 
-        session.getTransaction().begin();
-        Product p = session.get(Product.class, prodId);
+//        session.getTransaction().begin();
+        Product p = session.get(Product.class, id);
         session.delete(p);
-        session.getTransaction().commit();
+//        session.getTransaction().commit();
     }
 
     @Override

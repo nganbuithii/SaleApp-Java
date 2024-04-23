@@ -25,9 +25,14 @@
             <td>${p.name}</td>
             <td>${String.format("%,d",p.price)} VNĐ</td>
             <td>
+                <c:url value="/products/${p.id}" var="url"/>
                 <a class="btn btn-info" href="<c:url value="/products/${p.id}" />">Cập nhật</a>
-                <button class="btn btn-danger">Xóa</button>
+                <button class="btn btn-danger" onclick="deleteProduct(${p.id})">Xóa</button>
             </td>
         </tr>
     </c:forEach>
 </table>
+
+<script src="<c:url value="/js/script.js" /> ">
+
+</script>
