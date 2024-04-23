@@ -13,7 +13,7 @@
 <%--@elvariable id="products" type=""--%>
 <form:form method="post" action="${action}" modelAttribute="product" enctype="multipart/form-data">
 <%--    Xuat loi--%>
-    <form:errors path="name" cssClass="alert alert-danger "/>
+    <form:errors path="name" element="div"  cssClass="alert alert-danger "/>
     <div class="form-floating mb-3 mt-3">
 
         <form:input class="form-control" id="name" placeholder="Tên sản phẩm" path="name"/>
