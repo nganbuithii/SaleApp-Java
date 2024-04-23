@@ -18,6 +18,7 @@
                     <li class="nav-item">
 
                         <a class="nav-link" href="<c:url value="/"/>">Trang chủ</a>
+                    </li>
                    
                     <c:forEach items="${categories}" var="c">
                         <li class="nav-item">
@@ -29,7 +30,10 @@
                             <a class="nav-link" href="${myUrl}">${c.name}</a>
                         </li>
                     </c:forEach>
+                    <li class="nav-item">
 
+                        <a class="nav-link btn btn-info" href="<c:url value="/stats"/>">Thống kê, báo cáo</a>
+                    </li>
 
                 </ul>
     <%--            form tìm kiếm--%>
