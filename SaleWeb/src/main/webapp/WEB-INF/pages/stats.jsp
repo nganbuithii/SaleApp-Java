@@ -19,11 +19,11 @@
                 </th>
             </tr>
             <c:forEach items="${RenvenueByProduct}" var="p">
-            <tr>
-                <td>${p[0]}</td>
-                <td>${p[1]}</td>
-                <td>${String.format("%,d",p[2])} vnd</td>
-            </tr>
+                <tr>
+                    <td>${p[0]}</td>
+                    <td>${p[1]}</td>
+                    <td>${String.format("%,d",p[2])} vnd</td>
+                </tr>
             </c:forEach>
         </table>
     </div>
@@ -31,12 +31,16 @@
         <canvas id="myChart"></canvas>
     </div>
 </div>
-<hr class="hr" />
+<hr class="hr"/>
 <div class="row">
 
     <div class="col-md-5 col-12">
         <form>
-            <div class="form-floating">
+            <div class="mb-3 mt-3">
+                <label for="year" class="form-label">Chon nam:</label>
+                <input class="form-control" id="year" placeholder="Nam" name="year">
+            </div>
+            <div class="form-floating mt-3">
                 <select class="form-select" id="period" name="period">
                     <option selected value="MONTH">Theo thang</option>
                     <option value="QUATER">Theo quy</option>
@@ -44,7 +48,14 @@
                 </select>
                 <label for="period" class="form-label">Chon thoi gian</label>
             </div>
+            <div class="mt-3">
+                <button class="btn btn-success" type="submit" >Loc</button>
+            </div>
         </form>
+        <div class="alert alert-info">
+            <h4>Nam: ${param.year}</h4>
+            <h4>Thoi gian: ${param.period}</h4>
+        </div>
         <table class="table">
             <tr>
 
