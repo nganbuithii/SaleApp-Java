@@ -33,7 +33,18 @@
 </div>
 <hr class="hr" />
 <div class="row">
+
     <div class="col-md-5 col-12">
+        <form>
+            <div class="form-floating">
+                <select class="form-select" id="period" name="period">
+                    <option selected value="MONTH">Theo thang</option>
+                    <option value="QUATER">Theo quy</option>
+
+                </select>
+                <label for="period" class="form-label">Chon thoi gian</label>
+            </div>
+        </form>
         <table class="table">
             <tr>
 
