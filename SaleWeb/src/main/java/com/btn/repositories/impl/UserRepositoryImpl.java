@@ -18,6 +18,9 @@ public class UserRepositoryImpl implements UserRepository {
     private LocalSessionFactoryBean factoryBean;
     @Override
     public void addUser(User user) {
+        Session s = this.factoryBean.getObject().getCurrentSession();
+        s.save(user);
+        // Nhớ kiểm tra và xử lí lỗi ở đây thêm
 
     }
 

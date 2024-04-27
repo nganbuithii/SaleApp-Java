@@ -10,15 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe2259d7-a4af-44c1-abf6-3e70d4ca45ea" name="Changes" comment="Tách file ra để phân trang">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/btn/controllers/ApiCategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/btn/controllers/ApiUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/controllers/APIProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/controllers/APIProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/pojo/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/pojo/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/pojo/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/pojo/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/controllers/ApiUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/controllers/ApiUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/repositories/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/repositories/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/btn/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/btn/services/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +243,7 @@
       <workItem from="1713974484105" duration="596000" />
       <workItem from="1714000150390" duration="624000" />
       <workItem from="1714200369163" duration="31000" />
-      <workItem from="1714200418245" duration="1891000" />
+      <workItem from="1714200418245" duration="4173000" />
     </task>
     <task id="LOCAL-00001" summary="Xử lí dữ liệu product - tạo hạt đậu">
       <option name="closed" value="true" />

@@ -4,19 +4,12 @@
  */
 package com.btn.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.io.Serializable;
 import java.util.Set;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -60,13 +53,13 @@ public class User implements Serializable {
     private String lastName;
     // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
     @Basic(optional = false)
-    @NotNull
+
     @Size(min = 1, max = 45)
     @Column(name = "email")
     private String email;
     // @Pattern(regexp="^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$", message="Invalid phone/fax format, should be as xxx-xxx-xxxx")//if the field contains phone or fax number consider using this annotation to enforce field validation
     @Basic(optional = false)
-    @NotNull
+
     @Size(min = 1, max = 45)
     @Column(name = "phone")
     private String phone;
@@ -83,15 +76,17 @@ public class User implements Serializable {
     @Column(name = "active")
     private Boolean active;
     @Basic(optional = false)
-    @NotNull
+
     @Size(min = 1, max = 10)
     @Column(name = "user_role")
     private String userRole;
     @Size(max = 100)
     @Column(name = "avatar")
     private String avatar;
+    @JsonIgnore
     @OneToMany(mappedBy = "userId")
     private Set<SaleOrder> saleOrderSet;
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "userId")
     private Set<Comment> commentSet;
 
@@ -112,7 +107,15 @@ public class User implements Serializable {
         this.password = password;
         this.userRole = userRole;
     }
+    @Transient
+    private MultipartFile file;
+    public MultipartFile getFile() {
+        return file;
+    }
 
+    public void setFile(MultipartFile file) {
+        this.file = file;
+    }
     public Integer getId() {
         return id;
     }
