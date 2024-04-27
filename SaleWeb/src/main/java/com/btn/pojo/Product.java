@@ -4,6 +4,7 @@
  */
 package com.btn.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.Serializable;
@@ -61,13 +62,18 @@ public class Product implements Serializable {
     private Date createdDate;
     @Column(name = "active")
     private Boolean active;
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "productId")
     private Set<ProdTag> prodTagSet;
+    @JsonIgnore
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Category categoryId;
+
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "productId")
     private Set<Comment> commentSet;
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "productId")
     private Set<OrderDetail> orderDetailSet;
 
